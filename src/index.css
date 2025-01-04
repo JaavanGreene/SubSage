@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* App container styles */
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal styles */
+.modal {
+  background-color: white;
+  width: 90%;
+  max-width: 400px;
+  min-height: 150px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+}
+
+/* Container for input and button */
+.form-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Input field for email */
+.email-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+/* Submit button styles */
+.submit-btn {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+/* Error text below input */
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Ensure it spans the full width of the container */
+}
+
+/* Highlight input border on error */
+.input-error {
+  border-color: red;
+}
+
+/* Close button styles */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.close-btn:hover {
+  background-color: #e0e0e0;
+  color: #000;
 }
